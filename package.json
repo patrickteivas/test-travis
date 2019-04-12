@@ -1,0 +1,23 @@
+{
+  "name": "test-travis",
+  "scripts": {
+    "test": "npm run lint && npm run unit && npm run e2e",
+    "lint": "eslint --format node_modules/eslint-friendly-formatter --config .eslintrc.yml --ignore-path .gitignore --ext .js .",
+    "unit": "jest --verbose",
+    "e2e": "nightwatch --env local",
+    "upload": "node screenshotsUpload.js"
+  },
+  "devDependencies": {
+    "chromedriver": "^2.46.0",
+    "eslint": "^5.16.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "jest": "^24.7.1",
+    "nightwatch": "^1.0.19",
+    "selenium-server": "^3.141.59"
+  },
+  "dependencies": {
+    "dropbox": "^4.0.17",
+    "env2": "^2.2.2",
+    "isomorphic-fetch": "^2.2.1"
+  }
+}
